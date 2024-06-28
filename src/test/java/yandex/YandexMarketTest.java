@@ -86,7 +86,7 @@ public class YandexMarketTest {
         try {
             driver.get(YANDEX_PAGE);
 
-            // checkYandexPopOut();
+            // checkYandexPopUp();
 
             logger.info("Осуществлен переход: " + driver.getTitle());
         } catch (Exception e) {
@@ -138,7 +138,7 @@ public class YandexMarketTest {
         }
     }
 
-    private void selectMinDiagonal(String minDiagonal) {
+    public void selectMinDiagonal(String minDiagonal) {
         try {
             WebElement diagonalButton = wait.until(ExpectedConditions.presenceOfElementLocated(DIAGONAL_BUTTON));
             diagonalButton.click();
@@ -270,7 +270,7 @@ public class YandexMarketTest {
     }
 
 
-    public void checkYandexPopOut() {
+    public void checkYandexPopUp() {
         try {
             WebElement closePopUpButton = wait.until(ExpectedConditions.elementToBeClickable(CLOSE_YANDEX_POPUP_BUTTON));
             closePopUpButton.click();
